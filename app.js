@@ -9,6 +9,7 @@ const intensive = document.querySelector(".button1.intense")
 
 let totalseconds = 0 
 let running = false
+let paused = false 
 let split = [25,5]
 let myInterval = null 
 let phase = 0
@@ -29,10 +30,11 @@ function nextPhase(){
 
     if (phase >= split.length) {
         running = false;
+        paused = false; 
         clearInterval(myInterval);
     } else { 
-        
         running = false;
+        paused = false;
         start();
     }
 }
@@ -59,13 +61,26 @@ function updatetimer(){
 
 function start(){
     if (running) return;
-    running = true; 
-    totalseconds = split[phase] * 60 
-    myInterval = setInterval(updatetimer, 1000)
+
+    if (!paused) {
+        running = true; 
+        totalseconds = split[phase] * 60 
+        myInterval = setInterval(updatetimer, 1000)
+    } else { 
+        paused = false
+        myInterval = setInterval(updatetimer, 1000)
+    } 
+}
+
+function pause() { 
+    paused = true
+    running = false
+    clearInterval(myInterval)
 }
 
 easy.addEventListener("click", () =>splitchange(25,5))
 moderate.addEventListener("click", () =>splitchange(45,15))
 intensive.addEventListener("click", () => splitchange(52,8))
 strtbtn.addEventListener("click", start)
+stopbtn.addEventListener("click", pause)
 
