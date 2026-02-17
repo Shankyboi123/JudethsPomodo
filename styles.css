@@ -1,0 +1,134 @@
+.caveat-font {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html{
+  background: url('Josed.GIF');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+/* stops any white below or around */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header { 
+  position: relative;
+  text-align: center;
+}
+
+.heading,
+.subheading {
+    display: block;
+    margin: 0;
+}
+
+.heading {
+  font-size: 150px;
+  line-height: 1;
+}
+
+.subheading {
+  font-size: 100px;
+  margin-top: -55px;  /* Adjust this number */
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+#app-container { 
+  position: static;
+  right: 20px;
+}
+
+#Options{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  transform: translateY(150px);
+  transform: translateX(300px);
+}
+
+.circle-shape {
+  display: flex;
+  border-radius: 50%;
+  border: 6px solid black;
+  height: 550px; 
+  width: 550px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 22%;
+  margin-top: 3%;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+
+#clock { 
+  position: relative;
+  text-align: center;
+}
+
+#clock p {
+  font-size: 220px;
+  margin: 60;
+  line-height: 1;
+}
+
+#timer-actions { 
+  gap: 20px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.b-timer { 
+  border: none;
+  background: none;
+  outline: none;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 45px;
+}
+
+.b-timer:hover { 
+  color: aliceblue;
+}
+
+.button1 { 
+  border: none;
+  background: none;
+  outline: none;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 55px;
+}
+
+.button1:hover {
+  background: black;
+  color: white;
+  transform: translateX(10px);
+  border-radius: 25%;
+}
+
+
+
+
+
