@@ -31,7 +31,7 @@ function updatetimer(){
         seconds.textContent = secondsleft
     }
 
-    if (minutesleft === 0 && secondsleft ===0){
+    if (minuteleft === 0 && secondsleft ===0){
         bells.play()
         clearInterval(myInterval)
     }
